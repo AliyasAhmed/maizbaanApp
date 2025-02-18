@@ -16,7 +16,7 @@ class _SignUpScreenState extends State<SignUpScreen> {
   final TextEditingController _phonenumberController = TextEditingController();
   final TextEditingController _agentNameController = TextEditingController();
   final String signUpUrl =
-      "https://maizbaan.ai/api/v1/users/signup"; // Replace with your API
+      "http://127.0.0.1:8000/api/v1/users/signup"; // Replace with your API
 
   bool loading = false;
   String error = '';
@@ -28,7 +28,7 @@ class _SignUpScreenState extends State<SignUpScreen> {
   void fetchAgencies() async {
     setState(() => loading = true);
     final response =
-        await http.get(Uri.parse("https://maizbaan.ai/api/v1/users/agencies"));
+        await http.get(Uri.parse("http://127.0.0.1:8000/api/v1/users/agencies"));
 
     if (response.statusCode == 200) {
       setState(() {

@@ -13,7 +13,7 @@ class _LoginScreenState extends State<LoginScreen> {
   final TextEditingController _emailController = TextEditingController();
   final TextEditingController _passwordController = TextEditingController();
   final String loginUrl =
-      "https://your-api-endpoint.com/login"; // Replace with your actual API
+      "https://api.maizbaan.ai/api/v1/users/login"; // Replace with your actual API
 
   void _login() async {
     final response = await http.post(
@@ -42,8 +42,10 @@ class _LoginScreenState extends State<LoginScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar:
-          AppBar(title: Text("Login", style: TextStyle(color: Colors.black))),
+      appBar: AppBar(
+        title: Text("Login", style: TextStyle(color: Colors.black)),
+        backgroundColor: const Color.fromARGB(255, 7, 255, 222),
+      ),
       backgroundColor: Colors.white,
       body: Padding(
         padding: EdgeInsets.all(16.0),
@@ -65,7 +67,8 @@ class _LoginScreenState extends State<LoginScreen> {
             SizedBox(height: 20),
             ElevatedButton(
               style: ElevatedButton.styleFrom(
-                backgroundColor: const Color.fromARGB(255, 223, 106, 10), // Black button
+                backgroundColor:
+                    const Color.fromARGB(255, 10, 223, 205), // Black button
                 foregroundColor: Colors.white, // White text
                 padding: EdgeInsets.symmetric(horizontal: 40, vertical: 12),
                 shape: RoundedRectangleBorder(
@@ -107,13 +110,17 @@ class _LoginScreenState extends State<LoginScreen> {
       cursorColor: Colors.black, // Black cursor
       decoration: InputDecoration(
         labelText: labelText, // Floating label text
-        labelStyle: TextStyle(color: const Color.fromARGB(221, 3, 2, 1)), // Slightly lighter black
-        prefixIcon: Icon(icon, color: const Color.fromARGB(255, 231, 127, 9)), // Black icon
+        labelStyle: TextStyle(
+            color:
+                const Color.fromARGB(221, 3, 2, 1)), // Slightly lighter black
+        prefixIcon: Icon(icon,
+            color: const Color.fromARGB(255, 9, 231, 201)), // Black icon
         filled: true,
         fillColor: Colors.grey[100], // Light background
         focusedBorder: OutlineInputBorder(
           borderRadius: BorderRadius.circular(12),
-          borderSide: BorderSide(color: const Color.fromARGB(255, 216, 118, 5), width: 2),
+          borderSide: BorderSide(
+              color: const Color.fromARGB(255, 9, 231, 201), width: 2),
         ),
         enabledBorder: OutlineInputBorder(
           borderRadius: BorderRadius.circular(12),

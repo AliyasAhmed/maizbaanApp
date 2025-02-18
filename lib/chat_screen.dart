@@ -119,7 +119,7 @@ class _ChatScreenState extends State<ChatScreen> {
                   child: Container(
                     padding: EdgeInsets.all(12),
                     decoration: BoxDecoration(
-                      color: const Color.fromARGB(255, 224, 123, 7),
+                      color: const Color.fromARGB(164, 0, 255, 242),
                       shape: BoxShape.circle,
                     ),
                     child: Icon(Icons.send, color: Colors.white),
@@ -136,7 +136,7 @@ class _ChatScreenState extends State<ChatScreen> {
         currentIndex: _selectedIndex,
         onTap: _onItemTapped,
         backgroundColor: Colors.white,
-        selectedItemColor: const Color.fromARGB(255, 224, 125, 12),
+        selectedItemColor: const Color.fromARGB(255, 12, 224, 213),
         unselectedItemColor: Colors.grey,
         items: const [
           BottomNavigationBarItem(
