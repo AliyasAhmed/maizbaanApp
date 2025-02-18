@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:my_flutter_app/agentdetails.dart';
 import 'login_screen.dart';
 import 'home_screen.dart';
 
@@ -18,6 +19,7 @@ class MyApp extends StatelessWidget {
         primarySwatch: Colors.blueGrey,
       ),
       home: HomeScreen(), // Show HomeScreen initially
+      // home: AgentDetailsPage(),
     );
   }
 }

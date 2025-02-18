@@ -16,7 +16,7 @@ class HomeScreen extends StatelessWidget {
             decoration: BoxDecoration(
               gradient: LinearGradient(
                 colors: [
-                  Color.fromARGB(255, 187, 112, 0),
+                  Color.fromARGB(255, 0, 187, 187),
                   Color(0xFFF2F2FC)
                 ], // Blue Travel Theme
                 begin: Alignment.topCenter,
@@ -124,8 +124,8 @@ class HomeScreen extends StatelessWidget {
                   width: double.infinity,
                   child: ElevatedButton(
                     style: ElevatedButton.styleFrom(
-                      backgroundColor: const Color.fromARGB(255, 190, 116, 6),
-                      foregroundColor: Colors.white,
+                      backgroundColor: const Color.fromARGB(255, 6, 86, 190),
+                      // foregroundColor: Colors.white,
                       padding: EdgeInsets.symmetric(vertical: 15),
                       shape: RoundedRectangleBorder(
                           borderRadius: BorderRadius.circular(12)),
@@ -138,8 +138,11 @@ class HomeScreen extends StatelessWidget {
                                 ChatScreen()), // Navigate to ChatScreen
                       );
                     },
-                    child: Text("Continue Exploring",
-                        style: TextStyle(fontSize: 18)),
+                    child: Icon(
+                      Icons.explore,
+                      size: 25,
+                      color: Colors.white,
+                    ),
                   ),
                 ),
 
